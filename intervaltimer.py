@@ -34,6 +34,7 @@ if datem.hour < 10:
     s = "00"
 #increase the hour by one when minutes are higher than 55
 if y >= 55:
+    target_str = str(datem.hour+1) + ":" + "00" + ":" + "00"
     h = str(datem.hour+1)
     m = "00"
     s = "00"
@@ -43,7 +44,7 @@ if y >= 55 & datem.hour >= 23:  # when hour passes 23h mark it should be set to 
     s = "00"
 # if minute is below 10, add a zero infront to bring the minute to standard
 if y + interval < 10:
-    #hour has been set in earlier cases as suitably
+    h = "00"
     m = "0"+ str(y + interval)
     s = "00"
 
@@ -69,9 +70,6 @@ while loop==False:
         # when minutes reach 55, the addition must be equal to 00 and hours must be up by one
         if datem.minute == 55:
             h = str(datem.hour+1)
-            m = "00"
-        if  datem.hour < 10 & datem.minute == 55:
-            h = "0" + str(datem.hour+1)
             m = "00"
         if datem.minute == 55 & datem.hour >= 23: #when hour passes 23h mark it should be set to 00
             h = "00"
