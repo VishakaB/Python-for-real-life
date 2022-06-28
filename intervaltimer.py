@@ -44,7 +44,6 @@ if y >= 55 & datem.hour >= 23:  # when hour passes 23h mark it should be set to 
     s = "00"
 # if minute is below 10, add a zero infront to bring the minute to standard
 if y + interval < 10:
-    h = "00"
     m = "0"+ str(y + interval)
     s = "00"
 
@@ -75,7 +74,6 @@ while loop==False:
             h = "00"
             m = "00"
         if datem.minute + interval < 10:
-            h = "00"
             m = "0" + str(datem.minute + interval)
 
         target_str = h + ":" + m + ":" + s
