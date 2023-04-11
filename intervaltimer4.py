@@ -3,13 +3,14 @@ import winsound
 import tkinter as tk
 import os
 import time
-# Define the interval time in minutes
+
+# Define the interval time in five minutes
 interval = 5
 instance = 0
 
 def set_target_time():
     instance = 0
-    # Find the current time
+    #current time
     current_time = datetime.datetime.now()
 
     # Calculate the next multiple of the interval time
@@ -37,9 +38,8 @@ def check_time():
 
         if instance < 1:
             os.startfile(r"C:\Users\visha\OneDrive\Desktop\Ding Ding Iphone.mp3")
-            blink()
+            blink(60)
             time.sleep(60)
-
 
         # Update the target time
         target_time = set_target_time()
